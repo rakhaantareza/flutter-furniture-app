@@ -1,4 +1,4 @@
-# uts_furnity
+# uas_furnity
 
 A new Flutter project.
 

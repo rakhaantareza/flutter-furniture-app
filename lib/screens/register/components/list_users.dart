@@ -42,13 +42,20 @@ class _ListUsersPageState extends State<ListUsersPage> {
               },
               contentPadding: EdgeInsets.all(16),
               title: Text(
-                '${users.name} ${users.username}',
+                '${users.username}',
                 style: TextStyle(
                     fontSize: 18,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.deepOrangeAccent),
+                    fontFamily: 'Poppins',
+                    color: Colors.deepOrangeAccent
+                ),
               ),
-              subtitle: Text('${users.email}'),
+              subtitle: Text('${users.email}',
+                style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    color: Colors.black54,
+                ),
+              ),
               trailing: IconButton(
                 icon: Icon(Icons.delete),
                 onPressed: () {

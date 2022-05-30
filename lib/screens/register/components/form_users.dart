@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uts_furnity/constants.dart';
-import 'package:uts_furnity/screens/home/home_screen.dart';
 import 'package:uts_furnity/screens/register/components/list_users.dart';
-import 'package:uts_furnity/screens/started/started_screen.dart';
+import 'package:uts_furnity/screens/login/login_screen.dart';
 import 'package:uts_furnity/db/db_helper.dart';
 import 'package:uts_furnity/model/users.dart';
 
@@ -55,7 +54,7 @@ class _FormUsersState extends State<FormUsers> {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             const Text.rich(
               TextSpan(
@@ -175,7 +174,7 @@ class _FormUsersState extends State<FormUsers> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => StartedScreen()),
+                MaterialPageRoute(builder: (context) => LoginScreen()),
               );
             },
           ),

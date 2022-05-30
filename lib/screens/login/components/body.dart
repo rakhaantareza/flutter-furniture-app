@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uts_furnity/constants.dart';
 import 'package:uts_furnity/screens/home/home_screen.dart';
 import 'package:uts_furnity/screens/started/started_screen.dart';
+import 'package:uts_furnity/screens/register/register_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -98,15 +99,24 @@ class Body extends StatelessWidget {
                 ),
               ),
             ),
-            const Text.rich(
-              TextSpan(
-                text: 'Forgot Password ',
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 17,
-                  fontFamily: 'Poppins',
-                  decoration: TextDecoration.underline
-                ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterScreen()),
+                );
+              },
+              child: const Text.rich(
+                  TextSpan(
+                      text: 'Register Now',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                          decoration: TextDecoration.underline,
+                          color: kTextColor
+                      ),
+                  )
               ),
             ),
           ],

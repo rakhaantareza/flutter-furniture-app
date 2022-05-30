@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uts_furnity/components/bottom_nav_bar.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uts_furnity/constants.dart';
 import 'package:uts_furnity/db/db_helper.dart';
 import 'package:uts_furnity/model/users.dart';
-import 'package:uts_furnity/screens/home/home_screen.dart';
-import 'package:uts_furnity/screens/register/components/form_users.dart';
 import 'package:uts_furnity/screens/home/home_screen.dart';
 
 class ListUsersPage extends StatefulWidget {
@@ -32,7 +28,7 @@ class _ListUsersPageState extends State<ListUsersPage> {
       backgroundColor: kPrimaryColor,
       bottomNavigationBar: Container(
         padding: const EdgeInsets.only(
-            top: 20, right: 50, left: 50, bottom: 50
+            top: 20, right: 40, left: 40, bottom: 50
         ),
         height: 570,
         decoration: const BoxDecoration(
@@ -127,7 +123,7 @@ class _ListUsersPageState extends State<ListUsersPage> {
                     text: 'Welcome\n',
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 28,
+                        fontSize: 32,
                         fontFamily: 'Poppins',
                         color: Colors.white
                     ),

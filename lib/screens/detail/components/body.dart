@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:uts_furnity/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:uts_furnity/screens/catalog//catalog_screen.dart';
+import 'package:uts_furnity/screens/catalog/catalog_screen.dart';
+import 'package:uts_furnity/screens/payment/payment_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -27,7 +28,7 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 const Text.rich(
                   TextSpan(
-                    text: 'Fejka Chair\n',
+                    text: 'FEJKA\n',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -77,10 +78,10 @@ class Body extends StatelessWidget {
             ),
             const Text.rich(
               TextSpan(
-                text: 'Lorem ipsum dolor sit amet, '
-                    'consectetur adipiscing elit. Duis vitae facilisis ligula.'
-                    ' Cras at massa nibh. Sed at aliquet nibh. Morbi eu aliquet'
-                    ' tellus. Integer facilisis leo leo.',
+                text: 'Bring new life to an old favourite. '
+                    'We first introduced this chair in the 1950s.'
+                    ' Some 60 years later we brought it back into the range'
+                    ' with the same craftsmanship.',
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   fontFamily: 'Poppins',
@@ -105,9 +106,13 @@ class Body extends StatelessWidget {
                     minimumSize: Size(140,45),
                   ),
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentScreen()),
+                    );
                   },
                   child: const Text(
-                    'Chat Admin',
+                    'Buy Now',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,

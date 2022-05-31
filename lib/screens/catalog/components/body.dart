@@ -56,32 +56,38 @@ class Body extends StatelessWidget {
               mainAxisSpacing: 20,
               children: <Widget>[
                 CatalogCard(
-                  title: "Fejka Chair",
+                  title: "STRANDMON",
+                  subtitle: "Wing chair, Skiftebo yellow",
                   svgSrc: "assets/images/c1.png",
                   press: () {},
                 ),
                 CatalogCard(
-                  title: "Fejka Chair",
+                  title: "FEJKA",
+                  subtitle: "High-back armchair, Beige",
                   svgSrc: "assets/images/c2.png",
                   press: () {},
                 ),
                 CatalogCard(
-                  title: "Fejka Chair",
+                  title: "LANDSKRONA",
+                  subtitle: "3 seat-sofa, Gunnared grey",
                   svgSrc: "assets/images/c3.png",
                   press: () {},
                 ),
                 CatalogCard(
-                  title: "Fejka Chair",
+                  title: "BRIMNES",
+                  subtitle: "TV bench, bamboo/white, 180x41x53 cm",
                   svgSrc: "assets/images/c4.png",
                   press: () {},
                 ),
                 CatalogCard(
-                  title: "Fejka Chair",
+                  title: "KNARREVIK",
+                  subtitle: "Side-table, bamboo, 37x28 cm",
                   svgSrc: "assets/images/c5.png",
                   press: () {},
                 ),
                 CatalogCard(
-                  title: "Fejka Chair",
+                  title: "KLACKENAS",
+                  subtitle: "Sideboard, Oak brown, 120x97cm",
                   svgSrc: "assets/images/c6.png",
                   press: () {},
                 ),
@@ -97,12 +103,14 @@ class Body extends StatelessWidget {
 class CatalogCard extends StatelessWidget {
   final String svgSrc;
   final String title;
+  final String subtitle;
   final Function press;
 
   const CatalogCard({
     Key? key,
     required this.svgSrc,
     required this.title,
+    required this.subtitle,
     required this.press,
   }) : super(key: key);
 
@@ -111,7 +119,7 @@ class CatalogCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(15),
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
@@ -150,6 +158,15 @@ class CatalogCard extends StatelessWidget {
                       fontFamily: 'Poppins',
                       fontSize: 15,
                       fontWeight: FontWeight.w600
+                  ),
+                ),
+                Text(
+                  subtitle,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400
                   ),
                 )
               ],

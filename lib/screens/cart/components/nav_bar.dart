@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../constants.dart';
-import 'package:uts_furnity/screens/cart/cart_screen.dart';
+import 'package:uts_furnity/constants.dart';
+import 'package:uts_furnity/screens/home/home_screen.dart';
 
-class MyBottomNavBar extends StatelessWidget {
-  const MyBottomNavBar({
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({
     Key? key,
   }) : super(key: key);
 
@@ -45,18 +45,20 @@ class MyBottomNavBar extends StatelessWidget {
           IconButton(
             icon: SvgPicture.asset(
                 "assets/icons/home.svg",
-                color: kPrimaryColor
             ),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: SvgPicture.asset("assets/icons/shopping-cart.svg"),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CartScreen()),
+                MaterialPageRoute(builder: (context) => HomeScreen()),
               );
             },
+          ),
+          IconButton(
+            icon: SvgPicture.asset(
+                "assets/icons/shopping-cart.svg",
+                color: kPrimaryColor
+            ),
+            onPressed: () {},
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/person.svg"),
